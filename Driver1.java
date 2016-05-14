@@ -13,11 +13,12 @@ public class Driver1 {
 		HashTable hash = new HashTable(100);
 		HashTable hashIntersts = new HashTable(100);
 
-		WeightedGraph<User> graphUsers = new WeightedGraph<>(100);
-		WeightedGraph<String> graphInterests = new WeightedGraph<>(100);
+		Graph<User> graphUsers = new Graph<>(100);
+		Graph<String> graphInterests = new Graph<>(100);
 
 		ArrayList<User> userList = new ArrayList<>();
 
+		//Fill the database
 		User user1 = new User("hector", "12", "Héctor", "Hurtado", "27/Jul/95", 1);
 		User user2 = new User("marco", "12", "Marco", "Robles", "04/Sep/96", 1);
 		User user3 = new User("pepe", "12", "José", "Hernández", "08/May/97", 1);
@@ -187,10 +188,7 @@ public class Driver1 {
 		graphInterests.addEdge("Gimnasio", user12.getUsername(), 1);
 		graphInterests.addEdge("Nadar", user12.getUsername(), 1);
 
-		//TIEMPO long initTime = System.nanoTime();
-		long initTime = System.nanoTime();
-		//-----------------------
-
+		
 		boolean loop = true;
 		do {
 			int posicionadorDeTemp = 0;
@@ -356,7 +354,7 @@ public class Driver1 {
 									boolean editProfile = true;
 									do {
 										int edit = Integer.parseInt(JOptionPane.showInputDialog("Edit Profile \nWhat do you want to edit? "
-												+ "\n1) First Name \n2) Last Name \n3) Date Birth \n4) Password \n5) Add new interest or hobby\n6) Delete account\n7) Go back"));
+												+ "\n1) First Name \n2) Last Name \n3) Date Birth \n4) Password \n5) Add new interest or hobby\n10) Go back"));
 										User temp2 = temp;
 										switch (edit) {
 										case 1:
@@ -413,23 +411,6 @@ public class Driver1 {
 											}
 											
 											break;
-
-										case 6:
-											int ansDelete = JOptionPane.showConfirmDialog(null, "Are you sure that you want to delete your account?",
-													"Warning", JOptionPane.YES_NO_OPTION);
-											if(ansDelete == 0) {
-												for(int i = 0; i < userList.size(); i++) {
-													graphUsers.removeEdge(temp, userList.get(i));
-												}
-												/*while(graphInterests.getToVertices(temp.getUsername()) != null)
-													graphInterests.getToVertices(temp.getUsername()).dequeue();*/
-												graphUsers.removeVertex(temp);
-												graphInterests.removeVertex(temp.getUsername());
-												userList.remove(temp);
-											}
-											temp = null;
-											editProfile = false;
-											break;
 										default:
 											int ans1 = JOptionPane.showConfirmDialog(null, "Do you want to save the changes?", "Warning", JOptionPane.YES_NO_OPTION);
 											if(ans1 == 0 && graphUsers.hasVertex(temp)){
@@ -471,7 +452,5 @@ public class Driver1 {
 			}
 		} while(loop);
 
-		long estimateTime = (System.nanoTime() - initTime) / 1000000000 ;
-		System.out.println(estimateTime + " sec");
 	}
 }

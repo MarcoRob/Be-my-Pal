@@ -1,13 +1,3 @@
-/* Laboratory 9 TC1018 Data Structure
- * Code by Marco A. Robles Pulido
- * 		& Victor Garcia Rosales
- * November 13, 2015
- * 
- */
-
-
-
-
 
 import Queue.LinkedUnbndQueue;
 import Queue.UnboundedQueueInterface;

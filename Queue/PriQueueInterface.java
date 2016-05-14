@@ -1,9 +1,4 @@
 package Queue;
-//----------------------------------------------------------------------------
-// PriQueueInterface.java          by Dale/Joyce/Weems               Chapter 9
-//
-// Interface for a class that implements a priority queue of Comparable objects.
-//----------------------------------------------------------------------------
 
 
 public interface PriQueueInterface<T extends Comparable<T>>

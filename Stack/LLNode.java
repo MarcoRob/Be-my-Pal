@@ -1,11 +1,4 @@
 package Stack;
-//----------------------------------------------------------------------------
-// LLNode.java            by Dale/Joyce/Weems                  Chapter 3
-//
-// Implements <T> nodes for a Linked List.
-//----------------------------------------------------------------------------
-
-
 public class LLNode<T>
 {
   private LLNode<T> link;

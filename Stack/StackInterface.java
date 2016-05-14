@@ -1,11 +1,4 @@
 package Stack;
-//----------------------------------------------------------------------------
-// StackInterface.java           by Dale/Joyce/Weems                 Chapter 3
-//
-// Interface for a class that implements a stack of <T>.
-// A stack is a last-in, first-out structure.
-//----------------------------------------------------------------------------
-
 
 public interface StackInterface<T>
 

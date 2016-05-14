@@ -1,11 +1,4 @@
 package Queue;
-//----------------------------------------------------------------------------
-// QueueInterface.java           by Dale/Joyce/Weems                 Chapter 5
-//
-// Interface for a class that implements a queue of T.
-// A queue is a "first in, first out" structure.
-//----------------------------------------------------------------------------
-
 
 public interface QueueInterface<T>
 

@@ -1,13 +1,4 @@
 package Stack;
-
-//----------------------------------------------------------------------
-// LinkedStack.java         by Dale/Joyce/Weems                Chapter 3
-//
-// Implements UnboundedStackInterface using a linked list 
-// to hold the stack elements.
-//-----------------------------------------------------------------------
-
-
 public class LinkedStack<T> implements UnboundedStackInterface<T>
 {
   protected LLNode<T> top;   // reference to the top of this stack

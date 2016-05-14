@@ -1,13 +1,6 @@
 package Queue;
 import Stack.LLNode;
 
-//---------------------------------------------------------------------------
-// LinkedUnbndQueue.java         by Dale/Joyce/Weems                Chapter 5
-//
-// Implements UnboundedQueueInterface using a linked list
-//---------------------------------------------------------------------------
-
-
 public class LinkedUnbndQueue<T> implements UnboundedQueueInterface<T>
 {
   protected LLNode<T> front;   // reference to the front of this queue
